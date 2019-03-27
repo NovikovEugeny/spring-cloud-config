@@ -12,9 +12,16 @@ public class TestController {
     @Value("${info.text}")
     private String message;
 
+    @Value("${db.password}")
+    private String pswd;
+
     @GetMapping("/messages")
     public String getMessage() {
         return message;
     }
 
+    @GetMapping("/pswd")
+    public String getPassword() {
+        return pswd;
+    }
 }
